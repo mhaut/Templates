@@ -1,0 +1,163 @@
+%\documentclass[a4paper]{article}
+\documentclass[12pt,a4paper,twoside]{article} % tamaño 12
+\usepackage[spanish]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[table]{xcolor} % para poner color en las tablas
+\usepackage{tikz} % grafos
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+\usepackage{amsmath} % códigos
+\usepackage{setspace} %interlineado algoritmo
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\algdef{SE}[DOWHILE]{Do}{doWhile}{\algorithmicdo}[1]{\algorithmicwhile\ #1}%
+\usepackage{subfig} % Para poner imágenes
+\usepackage{graphicx} % para poner dos imágenes juntas
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{anysize} 
+\marginsize{4cm}{2.5cm}{2.5cm}{2.5cm} 
+% Márgenes {izquierda}{derecha}{arriba}{abajo}. 
+\usepackage{mathptmx}% http://ctan.org/pkg/mathptmx Times new roman
+\usepackage{amsfonts}% Para expresiones matemáticas
+%\usepackage{setspace} % interlineado
+\renewcommand{\baselinestretch}{1.5} % Interlineado
+\usepackage{enumerate}% para los enumerate
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage[none]{hyphenat} %saltos y justificación texto
+\usepackage{float} 
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% XML %%%%%%%%%%
+\usepackage{listings}
+
+\usepackage{color}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  showstringspaces=false,
+  commentstyle=\color{gray}\upshape
+}
+
+\lstdefinelanguage{XML}
+{
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  stringstyle=\color{black},
+  identifierstyle=\color{darkblue},
+  keywordstyle=\color{cyan},
+  morekeywords={id,tx,ty,tz,rx,ry,rz,scale,file,type}% list your attributes here
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% COLOR %%%%%%%%
+\definecolor{palegreen}{rgb}{0.6, 0.98, 0.6}
+\definecolor{palegoldenrod}{rgb}{0.93, 0.91, 0.67}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+
+
+
+\rhead{\begin{picture}(0,0) \put(0,0){\includegraphics[width=1cm]{pictures/logouex_transp.png}}
+\end{picture}}
+\title{Título, ya lo veremos}
+\author{nombre del autor}
+\begin{document}
+\maketitle
+\sloppy 
+\pagebreak 
+\begin{abstract}
+EL RESUMEN EN INGLÉS
+\begin{center}
+ \textbf{Resumen}\\
+EL RESUMEN EN ESPAÑOL
+\end{center}
+ \hrulefill
+\end{abstract}
+
+\tableofcontents
+%\pagebreak
+\newpage
+\listoftables
+\newpage
+\listoffigures
+\newpage
+
+
+%%%%%%% ESTRUCTURA DEL TFG %%%%%%%%%%%%%%
+% A.PORTADA (según la estructura indicada a continuación) 
+% B.CONTRAPORTADA (según la estructura indicada a continuación) 
+% C.ÍNDICE GENERAL DE CONTENIDOS  
+% D.ÍNDICE DE TABLAS  
+% E.ÍNDICE DE FIGURAS 
+% F.RESUMEN (Podrá incluirse también en inglés, si así lo indica el Tutor1) 
+% G.CUERPO DEL TRABAJO (según la estr
+% uctura indicada a continuación) 
+% H.REFERENCIAS BIBLIOGRÁFICAS 
+% (Según norma ISO690)
+% I.ANEXOS, si los hubiera
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Cuerpo del trabajo
+% 1.INTRODUCCIÓN 
+% 2.OBJETIVOS 
+% 3.ANTECEDENTES / ESTADO DEL ARTE 
+% 4.MÉTODOLOGÍA 
+% 5.IMPLEMENTACIÓN Y DESARROLLO (Cuando proceda) 
+% 6.RESULTADOS Y DISCUSIÓN 
+% 7.CONCLUSIONES 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tamaño: Normalizado UNE A-4, salvo planos. 
+% Tipo y tamaño de letra del texto: Times New Roman 12 pt, Arial 12 pt o similar. 
+% Interlineado del texto: 1,5 líneas. 
+% Márgenes del texto: Superior, Inferior y Derecha, 2,5 cm; Izquierda, 4 cm. 
+% Numeración de páginas en margen inferior derecha y tamaño 8 pt. 
+% Las  figuras  serán  numeradas  y  tituladas  debajo  de  las  mismas  (indicando  su  fuente  si  no  son  de  elaboración  
+% propia). 
+% Las  tablas  serán  numeradas  y  tituladas  encima  de  las  mismas  (indicando  su  fuente  si  no  son  de  elaboración  
+% propia). 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{INTRODUCCIÓN}
+Escribir aqui la introducción
+
+\section{OBJETIVOS}
+Escribir aqui los objetivos
+
+\section{ESTADO DEL ARTE}
+Escribir aqui estado del arte
+
+\section{METODOLOGÍA}
+Escribir aqui la metodología utilizada
+
+\section{IMPLEMENTACIÓN Y DESARROLLO}
+Escribir aqui la implementación
+
+\section{RESULTADOS}
+Escribir aqui los resultados
+
+\section{CONCLUSIONES Y TRABAJO FUTURO}
+Escribir aqui las conclusiones y trabajo futuro
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% AL FINAL %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+\pagestyle{empty}
+%%%% https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
+\bibliographystyle{unsrt}
+%enlace a tu mendeley
+%\bibliography{Mendeley.bib}
+\end{document}
