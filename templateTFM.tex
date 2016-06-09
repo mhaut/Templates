@@ -26,6 +26,10 @@
 \pagestyle{fancy}
 \usepackage[none]{hyphenat} %saltos y justificación texto
 \usepackage{float} 
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{changepage}
+\usepackage{ragged2e}
 
 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%% XML %%%%%%%%%%
@@ -67,19 +71,119 @@
 
 \rhead{\begin{picture}(0,0) \put(0,0){\includegraphics[width=1cm]{pictures/logouex_transp.png}}
 \end{picture}}
-\title{Título, ya lo veremos}
-\author{nombre del autor}
+
+
 \begin{document}
-\maketitle
 \sloppy 
 \pagebreak 
+%http://tex.stackexchange.com/questions/129088/create-a-frame-for-a-title-page
+\makeatletter
+
+\begin{titlepage}
+	\begin{adjustwidth}{-1.5cm}{0cm}
+		\begin{tikzpicture}[remember picture, overlay]
+		\usetikzlibrary{calc}
+		\draw[line width = 1.5pt] ($(current page.north west) + (1in,-1in)$) rectangle ($(current page.south east) + (-1in,1in)$);
+		\end{tikzpicture}
+		
+		\vspace{-3.5em}
+		\hspace{-0.5em}
+		\begin{minipage}{0.45\textwidth}
+			\begin{flushleft}
+				\includegraphics[width=1.75cm]{pictures/logouex_transp.png}
+			\end{flushleft}
+		\end{minipage}
+		
+		\vspace{-6em}
+		\hspace{20em}
+		\begin{minipage}{0.45\textwidth}
+			\begin{flushright}
+				\includegraphics[width=4cm]{pictures/logoEpcc.png}
+			\end{flushright}
+		\end{minipage}\\[1.5cm]
+		
+		\begin{center}
+			
+			
+			% Upper part of the page
+			\textsc{\LARGE UNIVERSIDAD DE EXTREMADURA}\\[4cm]
+			
+			\textsc{\Large Escuela Politécnica}\\[0.5cm]
+			\textsc{\Large Máster Universitario en Ingeniería Informática}\\[3cm]
+			\textsc{\Large Trabajo Fin de Máster}\\[0.5cm]
+			{ \large \bfseries Desarrollo de una librería para el análisis de datos vectoriales 2D}\\[0.8cm]
+			{ \huge \bfseries  pyCircularStat}\\[1.4cm]
+			
+			\vfill
+			
+			% Bottom of the page
+			{\large}
+			
+		\end{center}
+	\end{adjustwidth}
+\end{titlepage}
+
+
+\begin{titlepage}
+	\begin{adjustwidth}{-1.5cm}{0cm}
+		\begin{tikzpicture}[remember picture, overlay]
+		\usetikzlibrary{calc}
+		\draw[line width = 1.5pt] ($(current page.north west) + (1in,-1in)$) rectangle ($(current page.south east) + (-1in,1in)$);
+		\end{tikzpicture}
+		
+		\vspace{-3.5em}
+		\hspace{-0.5em}
+		\begin{minipage}{0.45\textwidth}
+			\begin{flushleft}
+				\includegraphics[width=1.75cm]{pictures/logouex_transp.png}
+			\end{flushleft}
+		\end{minipage}
+		
+		\vspace{-6em}
+		\hspace{20em}
+		\begin{minipage}{0.45\textwidth}
+			\begin{flushright}
+				\includegraphics[width=4cm]{pictures/logoEpcc.png}
+			\end{flushright}
+		\end{minipage}\\[1.5cm]
+		
+		\begin{center}
+			
+			
+			% Upper part of the page
+			\textsc{\LARGE UNIVERSIDAD DE EXTREMADURA}\\[3cm]
+			
+			\textsc{\Large Escuela Politécnica}\\[0.5cm]
+			\textsc{\Large Máster Universitario en Ingeniería Informática}\\[2.5cm]
+			\textsc{\Large Trabajo Fin de Máster}\\[0.5cm]
+			{ \large \bfseries Desarrollo de una librería para el análisis de datos vectoriales 2D}\\[0.8cm]
+			{ \huge \bfseries  pyCircularStat}\\[4cm]
+			
+			{ \large \bfseries Autor: }\\[0.5cm]
+			{ \large \bfseries Tutor: }\\[0.5cm]
+			{ \large \bfseries Co-Tutor: }\\[0.5cm]
+			\vfill
+			
+			% Bottom of the page
+			{\large}
+			
+		\end{center}
+	\end{adjustwidth}
+\end{titlepage}
+\makeatother
+\thispagestyle{empty}
+\newpage
+
+
+
 \begin{abstract}
 EL RESUMEN EN INGLÉS
 \begin{center}
  \textbf{Resumen}\\
+ \justify
 EL RESUMEN EN ESPAÑOL
 \end{center}
- \hrulefill
+\hrulefill
 \end{abstract}
 
 \tableofcontents
