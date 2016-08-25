@@ -1,0 +1,302 @@
+%\documentclass[a4paper]{article}
+\documentclass[12pt,a4paper,twoside]{article} % tamaño 12
+%\usepackage[spanish]{babel}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[table]{xcolor} % para poner color en las tablas
+\usepackage{tikz} % grafos
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+\usepackage{amsmath} % códigos
+\usepackage{setspace} %interlineado algoritmo
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\algdef{SE}[DOWHILE]{Do}{doWhile}{\algorithmicdo}[1]{\algorithmicwhile\ #1}%
+\usepackage{subfig} % Para poner imágenes
+\usepackage{graphicx} % para poner dos imágenes juntas
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{anysize} 
+\marginsize{4cm}{2.5cm}{2.5cm}{2.5cm} 
+% Márgenes {izquierda}{derecha}{arriba}{abajo}. 
+\usepackage{mathptmx}% http://ctan.org/pkg/mathptmx Times new roman
+\usepackage{amsfonts}% Para expresiones matemáticas
+%\usepackage{setspace} % interlineado
+\renewcommand{\baselinestretch}{1.5} % Interlineado
+\usepackage{enumerate}% para los enumerate
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage[none]{hyphenat} %saltos y justificación texto
+\usepackage{float} 
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{changepage}
+\usepackage{ragged2e}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% XML %%%%%%%%%%
+\usepackage{listings}
+
+\usepackage{appendix}
+% cambiar apéndices por anexos
+\renewcommand{\appendixname}{Anexos}
+\renewcommand{\appendixtocname}{Anexos}
+\renewcommand{\appendixpagename}{Anexos}
+
+\usepackage{color}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  showstringspaces=false,
+  commentstyle=\color{gray}\upshape
+}
+
+\lstdefinelanguage{XML}
+{
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  stringstyle=\color{black},
+  identifierstyle=\color{darkblue},
+  keywordstyle=\color{cyan},
+  morekeywords={id,tx,ty,tz,rx,ry,rz,scale,file,type}% list your attributes here
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% COLOR %%%%%%%%
+\definecolor{palegreen}{rgb}{0.6, 0.98, 0.6}
+\definecolor{palegoldenrod}{rgb}{0.93, 0.91, 0.67}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+
+
+
+\rhead{\begin{picture}(0,0) \put(0,0){\includegraphics[width=1cm]{pictures/logouex_transp.png}}
+\end{picture}}
+
+
+\begin{document}
+\sloppy 
+\pagebreak 
+%http://tex.stackexchange.com/questions/129088/create-a-frame-for-a-title-page
+\makeatletter
+
+\begin{titlepage}
+	\begin{adjustwidth}{-1.5cm}{0cm}
+		\begin{tikzpicture}[remember picture, overlay]
+		\usetikzlibrary{calc}
+		\draw[line width = 1.5pt] ($(current page.north west) + (1in,-1in)$) rectangle ($(current page.south east) + (-1in,1in)$);
+		\end{tikzpicture}
+		
+		\vspace{-3.5em}
+		\hspace{-0.5em}
+		\begin{minipage}{0.45\textwidth}
+			\begin{flushleft}
+				\includegraphics[width=1.75cm]{pictures/logouex_transp.png}
+			\end{flushleft}
+		\end{minipage}
+		
+		\vspace{-6em}
+		\hspace{20em}
+		\begin{minipage}{0.45\textwidth}
+			\begin{flushright}
+				\includegraphics[width=4cm]{pictures/logoEpcc.png}
+			\end{flushright}
+		\end{minipage}\\[1.5cm]
+		
+		\begin{center}
+			
+			
+			% Upper part of the page
+			\textsc{\LARGE UNIVERSIDAD DE EXTREMADURA}\\[4cm]
+			
+			\textsc{\Large Escuela Politécnica}\\[0.5cm]
+			\textsc{\Large Nombre de los Estudios}\\[3cm]
+			\textsc{\Large Trabajo Fin de Grado}\\[0.5cm]
+			{ \large \bfseries Título trabajo fin de grado}\\[4.0cm]
+			\vfill
+			% Bottom of the page
+			{\large}
+		\end{center}
+	\end{adjustwidth}
+\end{titlepage}
+
+
+\begin{titlepage}
+	\begin{adjustwidth}{-1.5cm}{0cm}
+		\begin{tikzpicture}[remember picture, overlay]
+		\usetikzlibrary{calc}
+		\draw[line width = 1.5pt] ($(current page.north west) + (1in,-1in)$) rectangle ($(current page.south east) + (-1in,1in)$);
+		\end{tikzpicture}
+		
+		\vspace{-3.5em}
+		\hspace{-0.5em}
+		\begin{minipage}{0.45\textwidth}
+			\begin{flushleft}
+				\includegraphics[width=1.75cm]{pictures/logouex_transp.png}
+			\end{flushleft}
+		\end{minipage}
+		
+		\vspace{-6em}
+		\hspace{20em}
+		\begin{minipage}{0.45\textwidth}
+			\begin{flushright}
+				\includegraphics[width=4cm]{pictures/logoEpcc.png}
+			\end{flushright}
+		\end{minipage}\\[1.5cm]
+		
+		\begin{center}
+			
+			
+			% Upper part of the page
+			\textsc{\LARGE UNIVERSIDAD DE EXTREMADURA}\\[3cm]
+			
+			\textsc{\Large Escuela Politécnica}\\[0.5cm]
+			\textsc{\Large Nombre de los Estudios}\\[2.5cm]
+			\textsc{\Large Trabajo Fin de Grado}\\[0.5cm]
+			{ \large \bfseries Título trabajo fin de grado}\\[4.0cm]			
+			{ \large \bfseries Autor: }\\[0.5cm]
+			{ \large \bfseries Tutor: }\\[0.5cm]
+			{ \large \bfseries Co-Tutor: }\\[0.5cm]
+			\vfill
+			% Bottom of the page
+			{\large}
+		\end{center}
+	\end{adjustwidth}
+\end{titlepage}
+\makeatother
+\thispagestyle{empty}
+\newpage
+
+
+\begin{abstract}
+	EL RESUMEN EN ESPAÑOL
+	\begin{center}
+		\textbf{Abstract}\\
+		\justify
+		EL RESUMEN EN INGLÉS
+	\end{center}
+	\hrulefill
+\end{abstract}
+\pagebreak
+\pagenumbering{roman}
+\setcounter{page}{1}
+\tableofcontents
+%\pagebreak
+\newpage
+\listoftables
+\newpage
+\listoffigures
+\newpage
+
+
+%%%%%%% ESTRUCTURA DEL TFG %%%%%%%%%%%%%%
+% A.PORTADA (según la estructura indicada a continuación) 
+% B.CONTRAPORTADA (según la estructura indicada a continuación) 
+% C.ÍNDICE GENERAL DE CONTENIDOS  
+% D.ÍNDICE DE TABLAS  
+% E.ÍNDICE DE FIGURAS 
+% F.RESUMEN (Podrá incluirse también en inglés, si así lo indica el Tutor1) 
+% G.CUERPO DEL TRABAJO (según la estr
+% uctura indicada a continuación) 
+% H.REFERENCIAS BIBLIOGRÁFICAS 
+% (Según norma ISO690)
+% I.ANEXOS, si los hubiera
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Cuerpo del trabajo
+% 1.INTRODUCCIÓN 
+% 2.OBJETIVOS 
+% 3.ANTECEDENTES / ESTADO DEL ARTE 
+% 4.MÉTODOLOGÍA 
+% 5.IMPLEMENTACIÓN Y DESARROLLO (Cuando proceda) 
+% 6.RESULTADOS Y DISCUSIÓN 
+% 7.CONCLUSIONES 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tamaño: Normalizado UNE A-4, salvo planos. 
+% Tipo y tamaño de letra del texto: Times New Roman 12 pt, Arial 12 pt o similar. 
+% Interlineado del texto: 1,5 líneas. 
+% Márgenes del texto: Superior, Inferior y Derecha, 2,5 cm; Izquierda, 4 cm. 
+% Numeración de páginas en margen inferior derecha y tamaño 8 pt. 
+% Las  figuras  serán  numeradas  y  tituladas  debajo  de  las  mismas  (indicando  su  fuente  si  no  son  de  elaboración  
+% propia). 
+% Las  tablas  serán  numeradas  y  tituladas  encima  de  las  mismas  (indicando  su  fuente  si  no  son  de  elaboración  
+% propia). 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{INTRODUCCIÓN}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{OBJETIVOS}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{ESTADO DEL ARTE}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{METODOLOGÍA}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{IMPLEMENTACIÓN Y DESARROLLO}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{RESULTADOS}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{CONCLUSIONES Y TRABAJO FUTURO}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% ANEXOS %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\clearpage
+\appendixpage
+\addappheadtotoc
+
+\addcontentsline{toc}{subsection}{Anexo I}
+\chapter{\textbf{AnexoI\\}}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\\
+
+\addcontentsline{toc}{subsection}{Insertar y referenciar una Imagen}
+\chapter{\textbf{Insertar y referenciar una Imagen\\}}
+Ejemplo Referenciar imagen \ref{fig:logoEpcc}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{pictures/logoEpcc.png}
+\caption[Logo Epcc]{Logo Epcc.\\Fuente:http://www.unex.es/conoce-la-uex/centros/epcc/}
+\label{fig:logoEpcc}
+\end{figure}
+
+
+\addcontentsline{toc}{subsection}{Citar bibliografía}
+\chapter{\textbf{Citar bibliografía\\}}
+
+Ejemplo Referenciar imagen \cite{haut2016cloud}
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% AL FINAL %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+\pagestyle{empty}
+%%%% https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
+\addcontentsline{toc}{section}{Bibliografía}
+\bibliographystyle{unsrt}
+%enlace a tu mendeley
+%\bibliography{Mendeley.bib}
+% o si es local
+\bibliography{LocalBibliography.bib}
+\end{document}
