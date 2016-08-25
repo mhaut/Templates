@@ -4,9 +4,9 @@
 
 The templates avaiable are in:
 
-1. [Thesis](https://github.com/mhaut/Templates/tree/master/thesis-TrabajoFinDeGrado)
-2. [Master's Thesis](https://github.com/mhaut/Templates/tree/master/mastersThesis-TrabajoFinDeMaster)
-3. [Disertation](https://github.com/mhaut/Templates/tree/master/PhD-Doctorado)
+1. [Thesis - Trabajo Fin de Grado](https://github.com/mhaut/Templates/tree/master/thesis-TrabajoFinDeGrado)
+2. [Master's Thesis - Trabajo Fin de Master](https://github.com/mhaut/Templates/tree/master/mastersThesis-TrabajoFinDeMaster)
+3. [PhD - Doctorado](https://github.com/mhaut/Templates/tree/master/PhD-Doctorado)
 
 Please:
 
