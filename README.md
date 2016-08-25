@@ -10,7 +10,7 @@ The templates avaiable are in:
 
 # Citting
 
-Haut J.M., Templates thesis, Master's Thesis and PhD, (2016), GitHub repository, https://github.com/mhaut/Templates
+Haut J.M., Open source Thesis, Master's Thesis and PhD templates, (2016), GitHub repository, https://github.com/mhaut/Templates
 
 # Contributing
 Thanks for your interest in contributing code!
