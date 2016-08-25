@@ -11,4 +11,4 @@ The templates avaiable are in:
 Please:
 
 1. Read Licese and use.
-2. If you find an error or some improvement, I'd appreciate you told me. Please, use [this template](https://github.com/mhaut/Templates/.contribuye)
+2. If you find an error or some improvement, I'd appreciate you told me. Please, use [this template](https://github.com/mhaut/Templates/tree/master/.github)
