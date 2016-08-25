@@ -1,6 +1,6 @@
 # Templates Open Source
 
-This is a repository of templates for Software Open Source of [Politechnic School](https://epcc.unex.es), Cáceres, [University of Extremadura](https://www.unex.es).
+[Politechnic School](https://epcc.unex.es), Cáceres, [University of Extremadura](https://www.unex.es).
 
 The templates avaiable are in:
 
