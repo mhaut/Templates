@@ -13,10 +13,5 @@ The templates avaiable are in:
 Haut J.M., Templates thesis, Master's Thesis and PhD, (2016), GitHub repository, https://github.com/mhaut/Templates
 
 # Contributing
-
-Please:
-
-1. Read Licese and use.
-2. If you find an error or some improvement, I'd appreciate you told me. Please, use [this template](https://github.com/mhaut/Templates/tree/master/.github)
-
-------------------------------------------------------------------------------------------------------
+Thanks for your interest in contributing code!
+If you find an error or some improvement, I'd appreciate you told me. Please, use [this template](https://github.com/mhaut/Templates/tree/master/.github)
