@@ -3,6 +3,7 @@
 %\usepackage[spanish]{babel}
 \usepackage[spanish, es-tabla]{babel}
 \usepackage[utf8x]{inputenc}
+\usepackage{titlesec}
 \usepackage[table]{xcolor} % para poner color en las tablas
 \usepackage{tikz} % grafos
 \usetikzlibrary{arrows,shapes,positioning,shadows,trees}
@@ -86,6 +87,16 @@
 %http://tex.stackexchange.com/questions/129088/create-a-frame-for-a-title-page
 \makeatletter
 
+% Añadida la profundida de secciones a 4, para poder crear una subsubsubsección con la definición \paragraph. Para esto se ha añadido el uso del paquete titlesec.
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
 \begin{titlepage}
 	\begin{adjustwidth}{-1.5cm}{0cm}
 		\begin{tikzpicture}[remember picture, overlay]
@@ -116,9 +127,9 @@
 			\textsc{\LARGE UNIVERSIDAD DE EXTREMADURA}\\[4cm]
 			
 			\textsc{\Large Escuela Politécnica}\\[0.5cm]
-			\textsc{\Large Nombre de los Estudios}\\[3cm]
+			\textsc{\Large Grado en Ingeniería Informática en Ingeniería Software}\\[3cm]
 			\textsc{\Large Trabajo Fin de Grado}\\[0.5cm]
-			{ \large \bfseries Título trabajo fin de grado}\\[4.0cm]
+			{ \large \bfseries Transformación Digital en Instituciones Públicas}\\[4.0cm]
 			\vfill
 			% Bottom of the page
 			{\large}
@@ -157,11 +168,11 @@
 			\textsc{\LARGE UNIVERSIDAD DE EXTREMADURA}\\[3cm]
 			
 			\textsc{\Large Escuela Politécnica}\\[0.5cm]
-			\textsc{\Large Nombre de los Estudios}\\[2.5cm]
+			\textsc{\Large Grado de Ingeniería Informática en Ingeniería Software}\\[2.5cm]
 			\textsc{\Large Trabajo Fin de Grado}\\[0.5cm]
-			{ \large \bfseries Título trabajo fin de grado}\\[4.0cm]			
-			{ \large \bfseries Autor: }\\[0.5cm]
-			{ \large \bfseries Tutor: }\\[0.5cm]
+			{ \large \bfseries Transformación Digital en Instituciones Públicas}\\[4.0cm]			
+			{ \large \bfseries Autor: Daniel Campos Olivares}\\[0.5cm]
+			{ \large \bfseries Tutor: Pablo García Rodríguez}\\[0.5cm]
 			{ \large \bfseries Co-Tutor: }\\[0.5cm]
 			\vfill
 			% Bottom of the page
@@ -175,11 +186,15 @@
 
 
 \begin{abstract}
-	EL RESUMEN EN ESPAÑOL
+
+% Aquí el resumen en español.
+	
 	\begin{center}
 		\textbf{Abstract}\\
 		\justify
-		EL RESUMEN EN INGLÉS
+		
+% Aquí el resumen en inglés si el tutor lo requiere.		
+		
 	\end{center}
 	\hrulefill
 \end{abstract}
@@ -202,8 +217,7 @@
 % D.ÍNDICE DE TABLAS  
 % E.ÍNDICE DE FIGURAS 
 % F.RESUMEN (Podrá incluirse también en inglés, si así lo indica el Tutor1) 
-% G.CUERPO DEL TRABAJO (según la estr
-% uctura indicada a continuación) 
+% G.CUERPO DEL TRABAJO (según la estructura indicada a continuación) 
 % H.REFERENCIAS BIBLIOGRÁFICAS 
 % (Según norma ISO690)
 % I.ANEXOS, si los hubiera
@@ -236,25 +250,29 @@
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
-\section{INTRODUCCIÓN}
+\section{INTRODUCCIÓN}\label{sec:introduccion}
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\section{OBJETIVOS}
+
+\section{OBJETIVOS}\label{sec:objetivos}
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\section{ESTADO DEL ARTE}
+
+\section{ESTADO DEL ARTE}\label{sec:stateofart}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\section{METODOLOGÍA}
+\section{METODOLOGÍAS}\label{sec:metodologias}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\section{IMPLEMENTACIÓN Y DESARROLLO}
+\section{IMPLEMENTACIÓN Y DESARROLLO}\label{sec:implementacionydesarrollo}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\section{RESULTADOS}
+\section{RESULTADOS}\label{sec:resultados}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\section{CONCLUSIONES Y TRABAJO FUTURO}
+\section{CONCLUSIONES Y TRABAJO FUTURO}\label{sec:conclusiones}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
@@ -267,7 +285,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor inci
 \addappheadtotoc
 
 \addcontentsline{toc}{subsection}{Anexo I}
-\chapter{\textbf{AnexoI\\}}
+\chapter{\textbf{Anexo I\\}}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\\
 
 \addcontentsline{toc}{subsection}{Insertar y referenciar una Imagen}
@@ -279,7 +297,6 @@ Ejemplo Referenciar imagen \ref{fig:logoEpcc}
 \caption[Logo Epcc]{Logo Epcc.\\Fuente:http://www.unex.es/conoce-la-uex/centros/epcc/}
 \label{fig:logoEpcc}
 \end{figure}
-
 
 \addcontentsline{toc}{subsection}{Citar bibliografía}
 \chapter{\textbf{Citar bibliografía\\}}
