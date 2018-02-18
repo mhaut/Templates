@@ -1,7 +1,7 @@
 %\documentclass[a4paper]{article}
 \documentclass[12pt,a4paper,twoside]{article} % tamaño 12
 %\usepackage[spanish]{babel}
-\usepackage[spanish, es-tabla]{babel}
+\usepackage[spanish, english, es-tabla]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage[table]{xcolor} % para poner color en las tablas
 \usepackage{tikz} % grafos
@@ -175,16 +175,16 @@
 \thispagestyle{empty}
 \newpage
 
-
+\selectlanguage{spanish} 
 \begin{abstract}
 	EL RESUMEN EN ESPAÑOL
-	\begin{center}
-		\textbf{Abstract}\\
-		\justify
-		EL RESUMEN EN INGLÉS
-	\end{center}
-	\hrulefill
 \end{abstract}
+\selectlanguage{english}
+\begin{abstract}
+	EL RESUMEN EN INGLÉS
+\end{abstract}
+
+\selectlanguage{spanish} 
 \pagebreak
 \pagenumbering{roman}
 \setcounter{page}{1}
