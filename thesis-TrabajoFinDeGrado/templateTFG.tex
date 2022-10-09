@@ -1,5 +1,5 @@
 %\documentclass[a4paper]{article}
-\documentclass[12pt,a4paper,twoside]{article} % tamaño 12
+\documentclass[12pt,a4paper,oneside]{article} % tamaño 12
 %\usepackage[spanish]{babel}
 \usepackage[USenglish, spanish, es-tabla]{babel}
 \usepackage[utf8x]{inputenc}
@@ -26,6 +26,8 @@
 \usepackage{enumerate}% para los enumerate
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\fancyfoot[]{}
+\fancyfoot[R]{\thepage}
 \usepackage[none]{hyphenat} %saltos y justificación texto
 \usepackage{float} 
 \usepackage{tikz}
@@ -204,7 +206,7 @@
 \selectlanguage{spanish}
 \pagebreak
 \pagenumbering{arabic}
-\setcounter{page}{1}
+
 \tableofcontents
 %\pagebreak
 \newpage
@@ -249,8 +251,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagenumbering{arabic}
-\setcounter{page}{1}
 
 \section{INTRODUCCIÓN}
 \label{sec:introduccion}
